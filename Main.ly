@@ -2,6 +2,7 @@
 \version "2.18.0"
 \include "definitions_No-Tab.ly"
 \include "AGuitar.ly"
+\include "ADrums.ly"
 
 \book {
  \header {
@@ -19,36 +20,17 @@
    instrumentName = \markup {\line {"Guitar"}}
    \clef "treble_8"
   }{
-   \key b \minor
-%  \tempo 4 = 100
+  \key b \minor
+  \tempo 4 = 120
   \time 4/4 
    \AGuitar
   }
-
-% \new Staff \with {
-%  instrumentName = \markup {\column {"Rhythm" \line {"Guitar"}}}
-%  \clef "treble_8"
-%  \key a \minor
-%  }{
-%  \time 3/4 
-%  \time 3/4 
-%  \tempo 4 = 100
-%   \IntroRhythmGuitar
-%  } % Staff (Guitar)
-%  \new Staff {
-%   \set Staff.instrumentName = #"Bass" 
-%   \clef "bass"
-%   \IntroBass
-%   \SectionABass
-%   \SectionBBass
-%   \SectionABass
-%   \SectionCBass
-%   \SectionBBass
-%   \SectionABass
-%   \SectionCBass
-%   \CodaBass
-%  }
-
+%{
+  \new DrumStaff <<
+   \new DrumVoice { \ADrumsOne }
+   \new DrumVoice { \ADrumsTwo }
+  >>
+%}
  >> % StaffGroup
  \layout {
   \context {
@@ -59,6 +41,6 @@
   }
   \context { \TabStaff \remove Clef_engraver }
  }
-\midi {}
+\midi {\tempo 4 = 120}
 } % score
 } % book
