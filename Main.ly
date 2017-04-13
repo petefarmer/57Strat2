@@ -1,7 +1,10 @@
 % '57 Strat 2
-\version "2.18.0"
+\version "2.18.2"
 \include "definitions_No-Tab.ly"
 \include "AGuitar.ly"
+\include "AGuitarRefrain.ly"
+\include "BGuitar.ly"
+\include "BGuitarRefrain.ly"
 \include "ADrums.ly"
 
 \book {
@@ -24,6 +27,9 @@
   \tempo 4 = 120
   \time 4/4 
    \AGuitar
+   \BGuitar
+   \AGuitarRefrain
+   \BGuitarRefrain
   }
 %{
   \new DrumStaff <<
