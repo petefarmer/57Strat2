@@ -11,7 +11,7 @@
  \header {
   title = "'57 Strat 2"
   subtitle = "DRAFT"
-  subsubtitle = "v0.1"
+  subsubtitle = "v0.1.1"
   composer = "John Jorgenson"
   copyright = \markup { \char ##x00A9 Copyright Jorgensongs 2014 }
  }
@@ -24,12 +24,12 @@
    \clef "treble_8"
   }{
   \key b \minor
-  \tempo 4 = 120
-  \time 4/4 
+  \tempo 4. = 120
+  \time 12/8 
    \AGuitar
-   \BGuitar
-   \AGuitarRefrain
-   \BGuitarRefrain
+%    \BGuitar
+%   \AGuitarRefrain
+%   \BGuitarRefrain
   }
 %{
   \new DrumStaff <<
